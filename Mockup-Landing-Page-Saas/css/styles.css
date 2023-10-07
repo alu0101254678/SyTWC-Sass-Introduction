@@ -1,0 +1,129 @@
+@charset "UTF-8";
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0; }
+
+.contacto, .garantias {
+  font-size: 18px;
+  color: #3498db; }
+
+.garantias {
+  font-weight: bold; }
+
+header {
+  display: flex; }
+  header .logo {
+    width: 100px;
+    height: auto; }
+  header .nombre-empresa {
+    margin-left: auto;
+    font-size: 24px;
+    color: #3498db;
+    font-weight: bold;
+    text-align: center; }
+
+.navbar {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* Estilos para el contenedor principal */
+.contenedor {
+  display: flex;
+  /* Utiliza flexbox para dividir el contenedor en dos partes */ }
+
+/* Estilos para la sección de productos (parte izquierda) */
+.productos {
+  flex: 1;
+  /* La parte de los productos ocupará una parte igual del espacio disponible */
+  padding: 20px;
+  /* Espaciado interno para los productos (ajusta según sea necesario) */
+  background-color: #f5f5f5;
+  /* Fondo de la parte de productos (personaliza según tus preferencias) */ }
+
+/* Estilos para la sección del formulario (parte derecha) */
+.formulario {
+  flex: 1;
+  /* Estilos específicos para los elementos dentro del formulario */ }
+  .formulario label {
+    display: block;
+    /* Hace que las etiquetas ocupen todo el ancho */
+    margin-bottom: 10px;
+    /* Espacio entre etiquetas */ }
+  .formulario input[type="text"],
+  .formulario input[type="email"],
+  .formulario textarea {
+    width: 100%;
+    /* Los campos de entrada ocupan todo el ancho */
+    padding: 10px;
+    /* Espaciado interno para los campos de entrada */
+    margin-bottom: 15px;
+    /* Espacio entre campos de entrada */
+    border: 1px solid #3498db;
+    border-radius: 5px; }
+    .formulario input[type="text"]:hover,
+    .formulario input[type="email"]:hover,
+    .formulario textarea:hover {
+      outline: none;
+      border-color: #217dbb;
+      /* Agrega cualquier otro estilo que desees para resaltar cuando se pasa el ratón por encima */
+      box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); }
+  .formulario button[type="submit"] {
+    background-color: #3498db;
+    /* Color de fondo del botón */
+    color: #fff;
+    /* Color de texto del botón */
+    padding: 10px 20px;
+    /* Espaciado interno del botón */
+    border: none;
+    /* Sin borde */
+    border-radius: 3px;
+    /* Bordes redondeados para el botón */
+    cursor: pointer;
+    /* Cambia el cursor al pasar el ratón */ }
+    .formulario button[type="submit"]:hover {
+      outline: none;
+      /* Agrega cualquier otro estilo que desees para resaltar cuando se pasa el ratón por encima */
+      box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); }
+
+.contacto, .garantias {
+  margin: 20px; }
+
+/* Estilos para la sección de clientes */
+.clientes {
+  margin: 20px;
+  text-align: center;
+  /* Centra el contenido horizontalmente */
+  font-size: 24px;
+  color: #3498db;
+  font-weight: bold;
+  text-align: center; }
+
+/* Estilos para la lista de clientes */
+.clientes-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /* Utiliza flexbox para crear una fila flexible */
+  justify-content: center;
+  /* Centra los elementos horizontalmente */
+  align-items: center;
+  /* Centra los elementos verticalmente (si es necesario) */ }
+
+/* Estilos para cada elemento de cliente en la lista */
+.clientes-lista li {
+  margin: 0 10px;
+  /* Espacio entre las imágenes de los clientes (ajusta según sea necesario) */ }
+
+.garantias {
+  background-color: #0f1f25;
+  text-align: center;
+  margin: 20px; }
+
+/*# sourceMappingURL=styles.css.map */

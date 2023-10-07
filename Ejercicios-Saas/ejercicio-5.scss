@@ -1,0 +1,22 @@
+$border-radius: 5px;
+$padding: 5px 20px;
+
+header {
+  border-radius: $border-radius;
+  padding: $padding;
+}
+
+.footer {
+  border-radius: $border-radius;
+  padding: $padding;
+}
+
+.feature a {
+  border-radius: $border-radius;
+  padding: $padding;
+}
+
+.content {
+  border-radius: $border-radius;
+  padding: $padding;
+}

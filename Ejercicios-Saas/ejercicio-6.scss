@@ -1,0 +1,50 @@
+// // Definir un mixin para el redondeo de esquinas
+// @mixin border-radius($radius) {
+//   -webkit-border-radius: $radius;
+//   -moz-border-radius: $radius;
+//   border-radius: $radius;
+// }
+
+// // Uso del mixin en diferentes selectores
+// .header {
+//   @include border-radius(5px);
+//   /* ... */
+// }
+
+// .footer {
+//   @include border-radius(10px);
+//   /* ... */
+// }
+
+// Define la cantidad de veces que se incrementará el valor del borde
+$iteraciones: 5;
+
+// Inicializa el valor del borde
+$border-radius-header: 5px;
+$border-radius-footer: 5px;
+
+// Genera los estilos utilizando un bucle for
+@for $i from 1 through $iteraciones {
+  .header {
+    -webkit-border-radius: $border-radius-header;
+    -moz-border-radius: $border-radius-header;
+    border-radius: $border-radius-header;
+    
+  }
+
+  // Incrementa el valor del borde en 1 píxel en cada iteración
+  $border-radius-header: $border-radius-header + 1px;
+}
+
+// Genera los estilos utilizando un bucle for
+@for $i from 1 through $iteraciones {
+  .footer {
+    -webkit-border-radius: $border-radius-footer;
+    -moz-border-radius: $border-radius-footer;
+    border-radius: $border-radius-footer;
+    
+  }
+
+  // Incrementa el valor del borde en 1 píxel en cada iteración
+  $border-radius-footer: $border-radius-footer + 1px;
+}

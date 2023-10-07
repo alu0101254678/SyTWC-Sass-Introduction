@@ -1,0 +1,14 @@
+// Mixin para estilos de encabezados (h2)
+@mixin estilo-h2 {
+  font-size: $font-size-titulo;
+  color: $color-primario;
+  font-weight: bold;
+  text-align: center;
+}
+
+// Mixin para centrar contenido
+@mixin centrar-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,122 @@
+// Importa los archivos parciales
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/base';
+
+// Estilos específicos de la página
+header {
+  display: flex;
+
+  .logo {
+    width: 100px; // Ajusta el tamaño según tus necesidades
+    height: auto;
+  }
+
+  .nombre-empresa {
+    margin-left: auto; // Ajusta el espaciado según tus necesidades
+    @include estilo-h2;
+  }
+
+}
+
+.navbar {
+  background-color: $color-primario;
+  color: white;
+  padding: 10px;
+  @include centrar-contenido;
+}
+
+/* Estilos para el contenedor principal */
+.contenedor {
+  display: flex; /* Utiliza flexbox para dividir el contenedor en dos partes */
+}
+
+/* Estilos para la sección de productos (parte izquierda) */
+.productos {
+  flex: 1; /* La parte de los productos ocupará una parte igual del espacio disponible */
+  padding: 20px; /* Espaciado interno para los productos (ajusta según sea necesario) */
+  background-color: #f5f5f5; /* Fondo de la parte de productos (personaliza según tus preferencias) */
+}
+
+/* Estilos para la sección del formulario (parte derecha) */
+.formulario {
+  flex: 1;
+
+  /* Estilos específicos para los elementos dentro del formulario */
+  label {
+    display: block; /* Hace que las etiquetas ocupen todo el ancho */
+    margin-bottom: 10px; /* Espacio entre etiquetas */
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%; /* Los campos de entrada ocupan todo el ancho */
+    padding: 10px; /* Espaciado interno para los campos de entrada */
+    margin-bottom: 15px; /* Espacio entre campos de entrada */
+
+    border: 1px solid $color-primario;
+    border-radius: 5px;
+
+    &:hover {
+      outline: none;
+      border-color: darken($color-primario, 10%);
+      /* Agrega cualquier otro estilo que desees para resaltar cuando se pasa el ratón por encima */
+      box-shadow: 0 0 5px rgba($color-primario, 0.5);
+    }
+  }
+
+  button[type="submit"] {
+    background-color: #3498db; /* Color de fondo del botón */
+    color: #fff; /* Color de texto del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 3px; /* Bordes redondeados para el botón */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+
+    &:hover {
+      outline: none;
+      /* Agrega cualquier otro estilo que desees para resaltar cuando se pasa el ratón por encima */
+      box-shadow: 0 0 5px rgba(#3498db, 0.5);
+    }
+  }
+}
+
+
+
+
+.contacto {
+  @extend .contacto;
+  margin: 20px;
+}
+
+
+/* Estilos para la sección de clientes */
+.clientes {
+  margin: 20px;
+  text-align: center; /* Centra el contenido horizontalmente */
+  @include estilo-h2;
+}
+
+/* Estilos para la lista de clientes */
+.clientes-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Utiliza flexbox para crear una fila flexible */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente (si es necesario) */
+}
+
+/* Estilos para cada elemento de cliente en la lista */
+.clientes-lista li {
+  margin: 0 10px; /* Espacio entre las imágenes de los clientes (ajusta según sea necesario) */
+}
+
+
+.garantias {
+  @extend .garantias;
+  background-color: #0f1f25;;
+  text-align: center;
+  margin: 20px;
+}

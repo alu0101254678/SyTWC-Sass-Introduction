@@ -1,0 +1,21 @@
+@import 'variables';
+
+// Estilos comunes
+body {
+  font-family: Arial, sans-serif;
+  background-color: $color-fondo;
+  margin: 0;
+  padding: 0;
+}
+
+// Herencia para estilos del contacto
+.contacto {
+  font-size: $font-size-subtitulo;
+  color: $color-primario;
+}
+
+// Estilos de garantías (usando la herencia)
+.garantias {
+  @extend .contacto;
+  font-weight: bold;
+}
