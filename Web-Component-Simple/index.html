@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Ciclo de Vida de Web Component con Shadow DOM y Atributos</title>
+  </head>
+  <body>
+    <!-- Definición del Web Component con Shadow DOM y plantilla -->
+    <script>
+      class MiCicloDeVida extends HTMLElement {
+        constructor() {
+          super();
+          const shadowRoot = this.attachShadow({ mode: 'open' }); // creamos y adjuntamos un dhadow doom
+
+          // Utilizamos una plantilla HTML para definir el contenido del componente
+          const template = document.createElement('template');
+          template.innerHTML = `
+            <style>
+              /* Estilos encapsulados para el componente */
+            </style>
+            <div>
+              <!-- Contenido del componente -->
+            </div>
+          `;
+          
+          shadowRoot.appendChild(template.content.cloneNode(true)); // adjunta el contenido de la plantilla al shadow doom
+
+          console.log('Creado');
+        }
+
+        connectedCallback() {
+          console.log('Adjuntado al DOM');
+        }
+
+        disconnectedCallback() {
+          console.log('Separado del DOM');
+        }
+
+        attributeChangedCallback(name, oldValue, newValue) {
+          console.log(`Cambio en el atributo "${name}": ${oldValue} => ${newValue}`);
+        }
+
+        static get observedAttributes() {
+          // Lista de atributos que deseaamos observar cambios
+          return ['mensaje'];
+        }
+      }
+
+      customElements.define('mi-ciclo-de-vida', MiCicloDeVida);
+    </script>
+
+    <!-- Uso del Web Component -->
+    <mi-ciclo-de-vida></mi-ciclo-de-vida>
+
+    <!-- Manipulación del Web Component -->
+    <button onclick="attachComponent()">Adjuntar al DOM</button>
+    <button onclick="detachComponent()">Separar del DOM</button>
+    <button onclick="changeAttribute()">Cambiar Atributo</button>
+
+    <script>
+      const miComponente = document.querySelector('mi-ciclo-de-vida');
+
+      function attachComponent() {
+        document.body.appendChild(miComponente);
+      }
+
+      function detachComponent() {
+        document.body.removeChild(miComponente);
+      }
+
+      function changeAttribute() {
+        miComponente.setAttribute('mensaje', 'Nuevo Mensaje');
+      }
+    </script>
+  </body>
+</html>
