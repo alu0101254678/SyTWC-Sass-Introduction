@@ -14,6 +14,9 @@ sudo apt-get install ruby
 $ sudo gem install sass
 
 $ sass -v
+
+$ sass ejercicio-x.scss ejercicio-x.css (compilar de scss a css)
+
  ```
 ### Herramienta: 
 Para realizar los ejercicios se puede usar la herramienta: https://www.sassmeister.com/

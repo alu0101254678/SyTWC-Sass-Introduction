@@ -1,1 +1,7 @@
-{"version":3,"sources":["ejercicio-3.scss","ejercicio-3.css"],"names":[],"mappings":"AAAA;EACE,YAAA;ACCF;ADCE;EACE,qBAAA;EACA,qBAAA;EACA,kBAAA;ACCJ;ADEE;EACE,cAAA;EACA,qBAAA;ACAJ","file":"ejercicio-3.css"}
+{
+"version": 3,
+"mappings": "AAAA,WAAY;EACV,KAAK,EAAE,KAAK;EAEZ,cAAG;IACD,OAAO,EAAE,YAAY;IACrB,eAAe,EAAE,IAAI;IACrB,WAAW,EAAE,KAAK;EAGpB,aAAE;IACA,OAAO,EAAE,KAAK;IACd,eAAe,EAAE,IAAI",
+"sources": ["ejercicio-3.scss"],
+"names": [],
+"file": "ejercicio-3.css"
+}
